@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link href="https://mulai.likeadream.repl.co/fire.css" rel="stylesheet" type="text/css" />
+  <link href="https://someone.likeadream.repl.co/style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+</head>
+
+<style>
+  img.aa {
+    max-width: 100% !important;
+    height: auto !important;
+    margin-top: 40px;
+    padding-bottom: 20px;
+  }
+</style>
+
+<body>
+  <div class="foto">
+    <!-- Foto Kamu dan Aku -->
+    <div class="image"><img id="ftKm" src="https://i.postimg.cc/7Y5St8C3/snuggles-caring-1.gif" width="130px"
+        height="130px" /><img id="ftAk" style="opacity:0;position:absolute;"
+        src="https://i.postimg.cc/kG6jCNrG/mimibubu-1.gif" width="130px" height="130px" /></div>
+    <!-- Nama Kamu --><span id="sp1"></span>
+    <div id="sp2" style="display:none;"><span id="text3"></span></div>
+    <div id="sp3" style="display:none;"><span id="text4"></span></div>
+  </div>
+
+  <div id='Content' style="display:none">
+    <div class="pyro" id="fire">
+      <div class="before"></div>
+      <div class="after"></div>
+    </div>
+    <blockquote>
+      <p id="text"></p>
+      <small style="margin-top: 10px;" id="text2"></small>
+    </blockquote>
+  </div>
+
+  <div id="tombo" class="content2">
+    <div id="lopdeg" class="ct1"><label class='lovein' onClick="mulai();nonTo()">&#10084;&#65039;</label></div>
+    <p style="opacity:.7;font-size:14px;color:white">Pencet Lovenya :"</p>
+    <img src='2a.png' class="aa">
+  </div>
+
+  <script type="text/javascript">
+
+    document.getElementById("sp1").innerHTML = "Hai cewe imut &#9829;<br>Apa kabar? Semoga baik baik ya"
+    const swals = Swal.mixin({
+      allowOutsideClick: false,
+    });
+    const swalsy = Swal.mixin({
+      confirmButtonText: 'Ok',
+      allowOutsideClick: false,
+    });
+    async function mulai() {
+      var {
+        value: nama
+      } = await swals.fire({
+        title: 'Tanggal berapa kita pertama kali jalan',
+        input: 'text',
+        allowOutsideClick: false,
+        showCancelButton: false,
+      });
+      if (nama == "12") {
+        window.nama = nama;
+        await swalsy.fire('Selamat jawaban kamu benar :v');
+        await swals.fire(innerHTML = "<img src='1a.png'width=300px /><br><h5>Selamat ya:))</h5>");
+        await swals.fire(`Sekarang lihat ini, Maaf kalau ga romantis ngucapinnya:v`);
+        document.getElementById("sp1").innerHTML = "Elin" + " &#128155;";
+        text =
+          "Selamat ulang tahun Elin, Semoga panjang umur sehat selalu dan dilancarkan semua urusannya, Semoga apa yang Elin inginkan cepat tercapai:))";
+        text2 = "#fahri #elin #lovesakebon";
+        ketik();
+        showDiv();
+      } else {
+        await swals.fire('Ups!', 'Masa lupa sih, coba lagi ya -,');
+        mulai();
+      }
+    }
+  </script>
+  <script>
+    function nonTo() {
+      document.getElementById('tombo').style.display = "none";
+    }
+
+    function showTo() {
+      document.getElementById('tombo').style.display = "block";
+    }
+
+    function nonDiv() {
+      document.getElementById('Content').style.display = "none";
+    }
+
+    function showDiv() {
+      document.getElementById('Content').style.display = "block";
+    }
+
+    function trm() {
+      document.getElementById('trm').style.margin = "0";
+    }
+
+    function whs() {
+      document.getElementById('whs').style.margin = "12px 12px 12px 0";
+      document.getElementById('trm').style.display = "none";
+    }
+
+    function iloveu() {
+      if (u == text2.length) {
+        document.getElementById('sp1').style.display = "none";
+        document.getElementById('sp2').style.display = "block";
+      }
+    }
+
+    function fotoKt() {
+      document.getElementById('ftKm').style.opacity = "0";
+      document.getElementById('ftAk').style.opacity = "1";
+      var e1 = document.getElementById('ftAk');
+      e1.classList.add("lopdeg");
+    }
+
+    var i = 0,
+      text;
+    text = ""
+    var u = 0,
+      text2;
+    text2 = ""
+    var o = 0,
+      text3;
+    text3 = "...                                        "
+    var a = 0,
+      text4;
+    text4 = "I Love U "
+
+    function ketik() {
+      if (i < text.length) {
+        document.getElementById("text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(ketik, 100);
+      }
+      if (i == text.length) {
+        ketikk();
+      }
+    }
+
+    function ketikk() {
+      if (u < text2.length) {
+        document.getElementById("text2").innerHTML += text2.charAt(u);
+        u++;
+        setTimeout(ketikk, 200);
+      }
+      if (u == text2.length) {
+        iloveu();
+        siap();
+      }
+    }
+
+    function siap() {
+      if (o < text3.length) {
+        document.getElementById("text3").innerHTML += text3.charAt(o);
+        o++;
+        setTimeout(siap, 80);
+      }
+      if (o == text3.length) {
+        document.getElementById('sp2').style.display = "none";
+        document.getElementById('sp3').style.display = "block";
+        duar();
+      }
+    }
+
+    function duar() {
+      if (a < text4.length) {
+        document.getElementById("text4").innerHTML += text4.charAt(a);
+        a++;
+        setTimeout(duar, 250);
+      }
+      if (a == text4.length) {
+        document.getElementById("text4").innerHTML = "I Love U &#9829;";
+        document.body.style.backgroundColor = "#000";
+        document.getElementById('fire').style.opacity = "1";
+        fotoKt();
+      }
+    }
+  </script>
+</body>
+
+</html>
