@@ -64,11 +64,11 @@
         value: nama
       } = await swals.fire({
         title: 'Tanggal berapa kita pertama kali jalan',
-        input: 'text',
+        input: 'date',
         allowOutsideClick: false,
         showCancelButton: false,
       });
-      if (nama == "12") {
+      if (nama == "06-05-2022") {
         window.nama = nama;
         await swalsy.fire('Selamat jawaban kamu benar :v');
         await swals.fire(innerHTML = "<img src='1a.png'width=300px /><br><h5>Selamat ya:))</h5>");
